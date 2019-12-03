@@ -1,0 +1,31 @@
+<div class="container sections">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Welcome to Item Catalog App</h1>
+            <p>Here you can view all the items filtered by a particular category. Click on a specific category to view, add, or delete items.
+            </p>
+        </div>
+      </div>
+</div>
+<div class="container sections">
+<div class="row">
+    <div class="col-md-3">
+        <h2>Categories</h2>
+            {% for i in categories %}
+                <div class="menu-item">
+                    <h3>{{i.name}}</h3>
+                </div>
+            {% endfor %}
+    </div>
+    <div class="offset-md-1"></div>
+    <div class="col-md-8">
+        <h2>Latest Items</h2>
+            {% for i in items %}
+                <div class="menu-item">
+                    <h3>{{i.name}}({{i.category.name}})</h3>
+                </div>
+            {% endfor %}
+    </div>
+
+</div>
+
